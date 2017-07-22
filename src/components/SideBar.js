@@ -5,10 +5,10 @@ import '../App.css';
 
 
 class SideBar extends Component {
-	
+
 	render() {
 		return (
-			<div>
+			<div id="SideBarDiv">
 				<p>SAD BAR</p>
 			</div>
 		)

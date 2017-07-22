@@ -23,7 +23,7 @@ class FormComponent extends React.Component {
 
  render(){
 return(
-<div id="wrapper" className="col-lg-12">
+<div id="FormComponentDiv" className="col-lg-12">
 <div className="row">
         <div className="col-lg-12">
           <PageHeader>Forms</PageHeader>
@@ -104,9 +104,8 @@ return(
 
       </div>
 
+</div>
 
-
-  </div>
 
       )
 

@@ -5,10 +5,11 @@ import '../App.css';
 class TopNav extends Component {
 	render() {
 		return (
+			<div id="TopNavDiv">
 			<Navbar inverse collapseOnSelect>
 			<Navbar.Header>
       			<Navbar.Brand>
-        			<a href="#" id="brandlogo">EnergyLowhatever</a>
+        			<a href="#" id="brandlogo">EnergyLoganSale</a>
 			    </Navbar.Brand>
 			<Navbar.Toggle />
     		</Navbar.Header>
@@ -19,7 +20,8 @@ class TopNav extends Component {
 			       	<NavItem className="navlist" eventKey={3} href="#">Logout</NavItem>
 			    </Nav>
 	        </Navbar.Collapse>
-			</Navbar>				
+			</Navbar>
+			</div>				
 		)
 	}
 }

@@ -14,9 +14,9 @@ class App extends Component {
     return (
       <div className="App">     
 
-        <TopNav/>
-        <Project/>
-        <SideBar/>
+        <TopNav />
+        <Project />
+        <SideBar />
 
       </div>
     );

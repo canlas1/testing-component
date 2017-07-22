@@ -31,7 +31,7 @@ class Login extends React.Component {
   render(){
     return(
 
-      <div className="col-md-6 col-center">
+      <div id="LoginDiv" className="col-md-6 col-center">
         
         <div className="text-center">
           <h1 className="login-brand-text">Login Portal!</h1>
