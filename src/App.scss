@@ -1,4 +1,26 @@
-h1 {
-  border: 5px bold;
-  color: blue;
+@import './styling/Login.scss';
+@import './styling/TopNav.scss';
+@import './styling/SideBar.scss';
+@import './styling/Project.scss';
+@import './styling/QuickView.scss';
+@import './styling/FormComponent.scss';
+
+#TopNavDiv {
+	
+}
+
+#SideBarDiv {
+
+}
+
+#ProjectDiv {
+
+}
+
+.QuickViewDiv {
+
+}
+
+#FormComponentDiv {
+
 }

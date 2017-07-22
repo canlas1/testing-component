@@ -6,8 +6,9 @@ import {
   FormControl,
   Checkbox,
   Form
-
 } from 'react-bootstrap';
+import '../App.css';
+
 
 // import FormControlFeedback from 'react-bootstrap/lib/FormControlFeedback';
 // import FormControlStatic from 'react-bootstrap/lib/FormControlStatic';
@@ -30,7 +31,7 @@ class Login extends React.Component {
   render(){
     return(
 
-      <div className="col-md-6 col-center">
+      <div id="LoginDiv" className="col-md-6 col-center">
         
         <div className="text-center">
           <h1 className="login-brand-text">Login Portal!</h1>
