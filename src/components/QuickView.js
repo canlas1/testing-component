@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Collapse} from 'pui-react-collapse';
+import '../App.css';
 
 class QuickView extends Component {
 	render() {

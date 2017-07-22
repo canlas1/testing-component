@@ -6,8 +6,8 @@ import {
   FormControl,
   FormGroup,
   Radio 
-
-   } from 'react-bootstrap';
+  } from 'react-bootstrap';
+import '../App.css';
 
 
 

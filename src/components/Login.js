@@ -6,8 +6,9 @@ import {
   FormControl,
   Checkbox,
   Form
-
 } from 'react-bootstrap';
+import '../App.css';
+
 
 // import FormControlFeedback from 'react-bootstrap/lib/FormControlFeedback';
 // import FormControlStatic from 'react-bootstrap/lib/FormControlStatic';
