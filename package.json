@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "auth0": "^2.7.0",
     "auth0-js": "^8.8.0",
     "bootstrap": "^3.3.7",
