@@ -6,7 +6,7 @@ import FormComponent from './components/FormComponent';
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
-
+// import Login from './styling/Login.'
 
 
 class App extends Component {
@@ -105,7 +105,6 @@ class App extends Component {
         </Form>
         </Panel>
         
-
         <TopNav />
         <Project />
         <SideBar />
