@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
 import './App.css';
 //import Login from './components/Login';
-<<<<<<< HEAD
 import FormComponent from './components/FormComponent';
-=======
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
 //import FormComponent from './components/FormComponent';
 
-
->>>>>>> 2f132b6ddbda1756390cba7df48505e6223dced4
 
 class App extends Component {
   goTo(route) {
@@ -28,9 +24,7 @@ class App extends Component {
 
   render() {
     const { isAuthenticated } = this.props.auth;
-
     return (
-<<<<<<< HEAD
        <div className="col-md-6 col-md-offset-6">
        <h1 className="login-brand-text">Login Portal!</h1>
              <Panel header className="login-panel">  
@@ -107,28 +101,21 @@ class App extends Component {
                     Log Out
                   </Button>
                 )
-
-             
-
-
             }
-        
-   
         </Form>
         </Panel>
-=======
-      <div className="App">     
+        
 
         <TopNav />
         <Project />
         <SideBar />
->>>>>>> 2f132b6ddbda1756390cba7df48505e6223dced4
-
         <FormComponent/>
-      </div>
+        </div>
+ 
     );
   }
 }
+
 
 export default App;
 
