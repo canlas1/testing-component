@@ -5,9 +5,7 @@ import {
   ControlLabel,
   FormControl,
   FormGroup,
-  Radio 
-
-   } from 'react-bootstrap';
+  Radio } from 'react-bootstrap';
 
 class FormComponent extends React.Component {
   constructor(props){

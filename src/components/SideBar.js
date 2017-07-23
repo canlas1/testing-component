@@ -1,39 +1,18 @@
-import React from 'react';
-// import from './sideBarMenu.css';
-import {Nav, NavItem, Navbar, NavDropdown, MenuItem, Glyphicon, Modal} from 'react-bootstrap'
+import React, {Component} from 'react';
+import Sidebar from 'react-side-bar';
+
+import '../App.css';
 
 
-class Sidebar extends React.Component {
+class SideBar extends Component {
 
-
-  render() {
-    return (
-
-      <div id="sidebar-menu" >
-
-        <Modal className='Sidebar left'
-      ></Modal>
-
-        </div>
-
-
-    );
-  }
+	render() {
+		return (
+			<div id="SideBarDiv">
+				<p>SAD BAR</p>
+			</div>
+		)
+	}
 }
 
-   //constructor(props) {
-    //super(props);
-  //   this.state = {
-  //     uiElementsCollapsed: true,
-  //     chartsElementsCollapsed: true,
-  //     multiLevelDropdownCollapsed: true,
-  //     thirdLevelDropdownCollapsed: true,
-  //     samplePagesCollapsed: true,
-  //   };
-  // }
-
-  
-
-
-
-export default Sidebar;
+export default SideBar;
