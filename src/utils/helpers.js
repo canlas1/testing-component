@@ -34,7 +34,7 @@ export default {
     },
 
     getProjectIncentives(project_id) {
-        let project = data.projects.project_id
+        let project = data.projects[project_id]
         console.log("PROJECT",project)
     }
 
