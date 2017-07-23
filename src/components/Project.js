@@ -57,10 +57,12 @@ var userObj = {
 class Project extends Component {
   constructor(props){
     super(props);
+    
     // Here we set a generic state associated with the number of clicks
     this.state = {projects:userObj.projects};
   }
 	render() {
+		const { isAuthenticated } = this.props.auth;
 		return (
 			<div id="ProjectDiv">
 				<h3 className="pl">Project List</h3>				

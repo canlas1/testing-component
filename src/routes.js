@@ -6,6 +6,9 @@ import Profile from './Profile/Profile';
 import Ping from './Ping/Ping';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
+import Project from './components/Project';
+
+
 import history from './history';
 
 const auth = new Auth();
@@ -21,7 +24,11 @@ export const makeMainRoutes = () => {
     <BrowserRouter history={history} component={App}>
         <div>
           <Route path="/" render={(props) => <App auth={auth} {...props} />} />
+
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
+          
+          <Route path="/project" render={(props) => <Project auth={auth} {...props}/>} /> 
+
           <Route path="/profile" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>
