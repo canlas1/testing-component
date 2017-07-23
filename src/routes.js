@@ -24,11 +24,7 @@ export const makeMainRoutes = () => {
     <BrowserRouter history={history} component={App}>
         <div>
           <Route path="/" render={(props) => <App auth={auth} {...props} />} />
-
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          
-          <Route path="/project" render={(props) => <Project auth={auth} {...props}/>} /> 
-
           <Route path="/profile" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>
@@ -41,6 +37,13 @@ export const makeMainRoutes = () => {
               <Redirect to="/home"/>
             ) : (
               <Ping auth={auth} {...props} />
+            )
+          )} />
+          <Route path="/project" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
             )
           )} />
           <Route path="/callback" render={(props) => {

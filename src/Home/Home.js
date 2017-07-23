@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Project from '../components/Project'
 
 class Home extends Component {
   render() {
@@ -8,9 +9,12 @@ class Home extends Component {
       <div className="container">
         {
           isAuthenticated() && (
+            <div>
               <h4>
                 You are logged in!
               </h4>
+              <Project/>
+              </div>
             )
         }
         {

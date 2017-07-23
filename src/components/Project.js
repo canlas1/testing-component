@@ -19,7 +19,7 @@ class Project extends Component {
   	helpers.getProjectIncentives(1)
   }
 	render() {
-		const { isAuthenticated } = this.props.auth;
+	// const { isAuthenticated } = this.props.auth;
 		return (
 			<div id="ProjectDiv">
 				<h3 className="pl">Project List</h3>				

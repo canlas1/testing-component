@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
 import './App.css';
 //import Login from './components/Login';
-import FormComponent from './components/FormComponent';
-import TopNav from './components/TopNav';
-import SideBar from './components/SideBar';
-import Project from './components/Project';
+//import FormComponent from './components/FormComponent';
+//import TopNav from './components/TopNav';
+//import SideBar from './components/SideBar';
+//import Project from './components/Project';
 // import Login from './styling/Login.'
 
 
@@ -32,25 +32,6 @@ class App extends Component {
           onSubmit={data => console.log(data)}
           onError={(errors, data) => console.log('error', errors, data)}
           >
-
- <div className="form-group">
-                   <FormControl
-                     type="text"
-                     className="form-control"
-                     placeholder="Username"
-                     name="name"
-                   />
-                 </div>
-
-                  <div className="form-group">
-                   <FormControl
-                     className="form-control"
-                     placeholder="Password"
-                     type="password"
-                     name="password"
-                   />
-                 </div>
-                 <Checkbox label="Remember Me" > Remember Me </Checkbox>
             <Button
               bsStyle="primary"
               className="btn-margin"
@@ -96,6 +77,18 @@ class App extends Component {
                   <Button
                     bsStyle="primary"
                     className="btn-margin"
+                    onClick={this.goTo.bind(this, 'project')}
+                  >
+                    Project
+                  </Button>
+                )
+            }
+
+            {
+              isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    className="btn-margin"
                     onClick={this.logout.bind(this)}
                   >
                     Log Out
@@ -104,11 +97,7 @@ class App extends Component {
             }
         </Form>
         </Panel>
-        
-        <TopNav />
-        <Project />
-        <SideBar />
-        <FormComponent/>
+
         </div>
  
     );
