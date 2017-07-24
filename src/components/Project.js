@@ -36,14 +36,11 @@ class Project extends Component {
 			<div>
 				<DetailedView/>
 			</div>
-				
+			 
 			<div>
 				<GraphView/>
 			</div>
-			
-				</div>
-			
-			
+				</div>		
 		)
 	}
 }
