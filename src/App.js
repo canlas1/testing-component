@@ -3,6 +3,7 @@ import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
 import './App.css';
 //import Login from './components/Login';
 import FormComponent from './components/FormComponent';
+import DetailedView from './components/DetailedView/DetailedView';
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
@@ -109,6 +110,7 @@ class App extends Component {
         <Project />
         <SideBar />
         <FormComponent/>
+        <DetailedView/>
         </div>
  
     );
