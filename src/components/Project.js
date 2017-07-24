@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
-import QuickView from './QuickView';
+// import QuickView from './QuickView'; <QuickView data={project}/>
 import '../App.css';
 import helpers from '../utils/helpers'
 
@@ -26,7 +26,7 @@ class Project extends Component {
 				<ListGroup>
 	        {this.state.projects.map(function(project) {
 	           return (<ListGroupItem>{project.project_name} 
-	           				    	<QuickView data={project}/>
+	           				    	
 	           				    </ListGroupItem>);
 	        })}
 				</ListGroup>
