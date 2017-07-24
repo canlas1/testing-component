@@ -1,30 +1,33 @@
 import React, {Component} from 'react';
-import {Collapse} from 'pui-react-collapse';
+import {Button, Collapse, Well, Glyphicon} from 'react-bootstrap';
 import '../App.css';
-
-
+import {ListGroup, ListGroupItem} from 'react-bootstrap';
 
 class QuickView extends Component {
     constructor(props) {
         super(props);
+        this.state = {};
     }
 	render() {
-		return (
+		return (<ListGroupItem onClick={ ()=> this.setState({ open: !this.state.open })}>
+			<Glyphicon glyph="menu-down" /> &nbsp;&nbsp;  <strong>{this.props.data.project_name}</strong>
 			<div className="QuickViewDiv">
-			<Collapse header="Click to view more" divider>
-				{(this.props.data) ? (
-					<div>
-						<p>Customer: {this.props.data.customer}</p>
-						<p>Address: {this.props.data.address}</p>
-						<p>Contact Name: {this.props.data.contact_name}</p>
-						<p>Contact Number: {this.props.data.contact_number}</p>
-						<p>Account Number: {this.props.data.account_number}</p>
-					</div>
+				<Collapse in={this.state.open}>
+					{(this.props.data) ? (
+						<div>
+							<br/>
+							<p>Customer: {this.props.data.customer}</p>
+							<p>Address: {this.props.data.address}</p>
+							<p>Contact Name: {this.props.data.contact_name}</p>
+							<p>Contact Number: {this.props.data.contact_number}</p>
+							<p>Account Number: {this.props.data.account_number}</p>
+						</div>
 					): <p>No data</p>
-				}
-			</Collapse>
+					}
+				</Collapse>
 			</div>
-		)
+			</ListGroupItem>
+		);
 	}
 }
 
