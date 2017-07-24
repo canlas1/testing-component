@@ -1,0 +1,39 @@
+
+.container{
+	font-size: 18px;
+}
+
+hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #FFA616 !important;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#header{
+	padding:10px;
+	background-color: rgba(255,166,22,.7);
+	height: 80px;
+}
+
+.header{
+	background-color: rgb(0,0,0);
+	color: white;
+}
+
+.header-post{
+	background-color: rgb(255,166,22);
+	color: white;
+}
+
+.data1{
+	background-color: rgba(0,0,0,.3);
+	color: black;
+}
+
+.data-post{
+	background-color: rgba(255,166,22,.3);
+	color: black;
+}

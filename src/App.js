@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
 import './App.css';
 //import Login from './components/Login';
+
 //import FormComponent from './components/FormComponent';
 //import TopNav from './components/TopNav';
 //import SideBar from './components/SideBar';
 //import Project from './components/Project';
-// import Login from './styling/Login.'
+
+import FormComponent from './components/FormComponent';
+import DetailedView from './components/DetailedView/DetailedView';
+import TopNav from './components/TopNav';
+import SideBar from './components/SideBar';
+import Project from './components/Project';
+
 
 
 class App extends Component {
@@ -66,9 +73,9 @@ class App extends Component {
                   <Button
                     bsStyle="primary"
                     className="btn-margin"
-                    onClick={this.goTo.bind(this, 'ping')}
+                    onClick={this.goTo.bind(this, 'quick-view')}
                   >
-                    Ping
+                    Quick View
                   </Button>
                 )
             }
@@ -84,6 +91,70 @@ class App extends Component {
                 )
             }
 
+              {
+              isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.goTo.bind(this, 'detailed-view')}
+                  >
+                    Detailed View
+                  </Button>
+                )
+            }
+
+
+              {
+              isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.goTo.bind(this, 'render-graph')}
+                  >
+                    Render Graph
+                  </Button>
+                )
+            }
+
+
+              {
+              isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.goTo.bind(this, 'financial-data')}
+                  >
+                   Financial Data
+                  </Button>
+                )
+            }
+
+
+              {
+              isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.goTo.bind(this, 'table-detailed-view')}
+                  >
+                    Table Detailed View
+                  </Button>
+                )
+            }
+
+             {
+              isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.goTo.bind(this, 'side-bar')}
+                  >
+                    SideBar
+                  </Button>
+                )
+            }
+
+
             {
               isAuthenticated() && (
                   <Button
@@ -97,6 +168,10 @@ class App extends Component {
             }
         </Form>
         </Panel>
+
+
+        
+       
 
         </div>
  

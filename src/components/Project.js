@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
-// import QuickView from './QuickView'; <QuickView data={project}/>
+import QuickView from './QuickView'; 
+import GraphView from './DetailedView/GraphView';
+import DetailedView from './DetailedView/DetailedView';
+//import RenderGraph from './DetailedView/RenderGraph';
 import '../App.css';
 import helpers from '../utils/helpers'
 
@@ -19,7 +22,6 @@ class Project extends Component {
   	helpers.getProjectIncentives(1)
   }
 	render() {
-	// const { isAuthenticated } = this.props.auth;
 		return (
 			<div id="ProjectDiv">
 				<h3 className="pl">Project List</h3>				
@@ -30,7 +32,18 @@ class Project extends Component {
 	           				    </ListGroupItem>);
 	        })}
 				</ListGroup>
+		
+			<div>
+				<DetailedView/>
 			</div>
+				
+			<div>
+				<GraphView/>
+			</div>
+			
+				</div>
+			
+			
 		)
 	}
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Project from '../components/Project'
+import Project from '../components/Project';
+import TopNav from '../components/TopNav';
+import SideBar from '../components/SideBar';
 
 class Home extends Component {
   render() {
@@ -13,7 +15,14 @@ class Home extends Component {
               <h4>
                 You are logged in!
               </h4>
+
               <Project/>
+              
+              <TopNav />
+              
+              <SideBar />
+             
+
               </div>
             )
         }
