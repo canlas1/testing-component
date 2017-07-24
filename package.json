@@ -6,7 +6,6 @@
     "bootstrap": "^3.3.7",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
-    "pui-react-collapse": "^8.3.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",

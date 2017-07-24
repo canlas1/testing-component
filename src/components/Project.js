@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
 import QuickView from './QuickView';
 import '../App.css';
 
@@ -55,26 +55,25 @@ var userObj = {
 }
 
 class Project extends Component {
-  constructor(props){
-    super(props);
-    // Here we set a generic state associated with the number of clicks
-    this.state = {projects:userObj.projects};
-  }
+    constructor(props){
+        super(props);
+        this.state = {projects:userObj.projects};
+    }
+  
 	render() {
+		const title = (<h4 id="pl">Project List</h4>);
 		return (
 			<div id="ProjectDiv">
-				<h3 className="pl">Project List</h3>				
-				<ListGroup>
-	        {this.state.projects.map(function(project) {
-	           return (<ListGroupItem>{project.project_name} 
-	           				    	<QuickView data={project}/>
-	           				    </ListGroupItem>);
-	        })}
-				</ListGroup>
+				<Panel header={title}>
+			      	<ListGroup fill>
+			        	{this.state.projects.map(function(project) {
+			           	return (<QuickView data={project}/>);
+			        })}
+					</ListGroup>
+			    </Panel>		    
 			</div>
 		)
 	}
 }
-
 
 export default Project;
