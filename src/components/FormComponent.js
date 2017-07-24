@@ -22,12 +22,12 @@ class FormComponent extends React.Component {
    //Here we set a generic state assocated with the text being searched for
   }
 
- handleCheckBox(event){
-  console.log('event',event)
-  let newState = {};
-  newState[this.data.radioGroup]=event.target.value;
-  // this.setState(newState)  
-}
+//  handleCheckBox(event){
+//   console.log('event',event)
+//   let newState = {};
+//   newState[this.data.radioGroup]=event.target.value;
+//   // this.setState(newState)  
+// }
 
 
  handleChange(event){
@@ -54,55 +54,55 @@ render(){
           </Radio>
           {' '}
           
-          <Radio data-radio="isSigned" name = "radioGroup" value="No" checked={this.state.isSigned === 'No'} onChange={this.handleCheckBox.bind(this)}>
+          <Radio data-radio="isSigned" name = "radioGroup" value="No" checked={this.state.isSigned === 'No'} onChange={(e)=> this.setState({isSigned:e.target.value})}>
             No
           </Radio>
           {' '}
         </FormGroup>
 
       <ControlLabel>Pre-Inspection Completion</ControlLabel>
-        <FormGroup>
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+        <FormGroup name="isInspected">
+          <Radio data-radio="isInspected" name = "radioGroup" value="Yes" checked={this.state.isInspected === 'Yes'} onChange={(e)=> this.setState({isInspected:e.target.value})}>
             Yes
           </Radio>
           {' '}
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+          <Radio data-radio="isInspected" name = "radioGroup" value="No" checked={this.state.isInspected === 'No'} onChange={(e)=> this.setState({isInspected:e.target.value})}>
            No
           </Radio>
           {' '}
         </FormGroup>
 
       <ControlLabel>Material Ordered</ControlLabel>
-        <FormGroup>
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+        <FormGroup name="isOrdered">
+          <Radio data-radio="isOrdered" name = "radioGroup" value="Yes" checked={this.state.isOrdered === 'Yes'} onChange={(e)=> this.setState({isOrdered:e.target.value})}>
           Yes
           </Radio>
           {' '}
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+          <Radio data-radio="isOrdered" name = "radioGroup" value="No" checked={this.state.isOrdered === 'No'} onChange={(e)=> this.setState({isOrdered:e.target.value})}>
           No
           </Radio>
           {' '}
         </FormGroup>
 
       <ControlLabel>Installation Completed</ControlLabel>
-        <FormGroup>
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+        <FormGroup name="isCompleted">
+          <Radio data-radio="isCompleted" name = "radioGroup" value="Yes" checked={this.state.isCompleted === 'Yes'} onChange={(e)=> this.setState({isCompleted:e.target.value})}>
           Yes
           </Radio>
           {' '}
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+          <Radio data-radio="isCompleted" name = "radioGroup" value="No" checked={this.state.isCompleted === 'No'} onChange={(e)=> this.setState({isCompleted:e.target.value})}>
           No
           </Radio>
           {' '}
       </FormGroup>
 
       <ControlLabel>Payment Processed</ControlLabel>
-        <FormGroup>
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+        <FormGroup name="isProcessed">
+          <Radio data-radio="isProcessed" name = "radioGroup" value="Yes" checked={this.state.isProcessed === 'Yes'} onChange={(e)=> this.setState({isProcessed:e.target.value})}>
           Yes
           </Radio>
           {' '}
-          <Radio name = "radioGroup" value={this.state.checked} onChange={this.handleCheckBox}>
+          <Radio data-radio="isProcessed" name = "radioGroup" value="No" checked={this.state.isProcessed === 'No'} onChange={(e)=> this.setState({isProcessed:e.target.value})}>
           No
         </Radio>
         {' '}
