@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route, BrowserRouter } from 'react-router-dom';
+import { Redirect, Route, BrowserRouter} from 'react-router-dom';
 import App from './App';
 import Home from './Home/Home';
 import Profile from './Profile/Profile';
@@ -7,7 +7,6 @@ import Ping from './Ping/Ping';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
-
 const auth = new Auth();
 
 const handleAuthentication = (nextState, replace) => {
@@ -44,3 +43,4 @@ export const makeMainRoutes = () => {
       </BrowserRouter>
   );
 }
+
