@@ -7,6 +7,7 @@ import Ping from './Ping/Ping';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import Project from './components/Project';
+import Dashboard from './components/Dashboard';
 
 
 import history from './history';
@@ -32,6 +33,7 @@ export const makeMainRoutes = () => {
               <Profile auth={auth} {...props} />
             )
           )} />
+
           <Route path="/ping" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>
@@ -39,6 +41,15 @@ export const makeMainRoutes = () => {
               <Ping auth={auth} {...props} />
             )
           )} />
+
+           <Route path="/dashboard" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
           <Route path="/project" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>

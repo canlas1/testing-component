@@ -16,12 +16,6 @@ class Home extends Component {
                 You are logged in!
               </h4>
 
-              <Project/>
-              
-              <TopNav />
-              
-              <SideBar />
-             
 
               </div>
             )

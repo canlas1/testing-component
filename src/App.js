@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
+import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
+// import logo from './logo.svg';
 import './App.css';
 //import Login from './components/Login';
-
-//import FormComponent from './components/FormComponent';
-//import TopNav from './components/TopNav';
-//import SideBar from './components/SideBar';
-//import Project from './components/Project';
-
+import Dashboard from './components/Dashboard';
 import FormComponent from './components/FormComponent';
 import DetailedView from './components/DetailedView/DetailedView';
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
-
 
 
 class App extends Component {
@@ -32,149 +28,60 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
-       <div className="col-md-6 col-md-offset-6">
-       <h1 className="login-brand-text">Login Portal!</h1>
-             <Panel header className="login-panel">  
+      <div className="col-md-6 col-md-offset-6">
+        <h1 className="login-brand-text">Login Portal!</h1>
+        
+        <Panel header className="login-panel">  
+        
           <Form
           onSubmit={data => console.log(data)}
           onError={(errors, data) => console.log('error', errors, data)}
           >
+
+
             <Button
               bsStyle="primary"
               className="btn-margin"
               onClick={this.goTo.bind(this, 'home')}
-            >
+              >
               Home
             </Button>
-            {
-              !isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.login.bind(this)}
-                  >
-                    Log In
-                  </Button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'profile')}
-                  >
-                    Profile
-                  </Button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'quick-view')}
-                  >
-                    Quick View
-                  </Button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'project')}
-                  >
-                    Project
-                  </Button>
-                )
-            }
-
-              {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'detailed-view')}
-                  >
-                    Detailed View
-                  </Button>
-                )
-            }
-
-
-              {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'render-graph')}
-                  >
-                    Render Graph
-                  </Button>
-                )
-            }
-
-
-              {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'financial-data')}
-                  >
-                   Financial Data
-                  </Button>
-                )
-            }
-
-
-              {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'table-detailed-view')}
-                  >
-                    Table Detailed View
-                  </Button>
-                )
-            }
-
-             {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.goTo.bind(this, 'side-bar')}
-                  >
-                    SideBar
-                  </Button>
-                )
-            }
-
+             
 
             {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.logout.bind(this)}
-                  >
-                    Log Out
-                  </Button>
-                )
-            }
-        </Form>
-        </Panel>
-
-
+            !isAuthenticated() && (
+              <Button
+              bsStyle="primary"
+              className="btn-margin"
+              onClick={this.login.bind(this)}
+              >
+              Log In
+              </Button>
+              )};
         
-       
 
-        </div>
- 
+              {
+              isAuthenticated() && (
+                <Button
+                bsStyle="primary"
+                className="btn-margin"
+                onClick={this.logout.bind(this)}
+                >
+                Log Out
+                </Button>
+              )};
+
+
+              {             
+              isAuthenticated() && (
+                <Dashboard/>
+              )};
+        
+         </Form>
+
+      </Panel>
+      
+    </div>
     );
   }
 }
