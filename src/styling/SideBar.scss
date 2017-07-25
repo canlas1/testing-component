@@ -1,1 +1,18 @@
 @import './colors.scss';
+
+a {
+	color: $yellow;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: $yellow;
+	color: $almostblack;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a > a{
+	color: $almostblack;
+}
+
+a:hover, a:focus {
+    color: $almostblack;
+    text-decoration: none;
+}

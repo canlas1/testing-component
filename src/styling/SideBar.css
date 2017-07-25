@@ -1,0 +1,13 @@
+a {
+  color: #f1c40f; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: #f1c40f;
+  color: #333333; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a > a {
+  color: #333333; }
+
+a:hover, a:focus {
+  color: #333333;
+  text-decoration: none; }
