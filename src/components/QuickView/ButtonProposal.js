@@ -46,7 +46,7 @@ class ButtonProposal extends Component{
          
           <Modal.Body>
 
-          <DetailedView />
+          <DetailedView project_id={this.props.project_id} kwh_rate={this.props.kwh_rate} project_name={this.props.project_name} customer={this.props.customer} address={this.props.address}/>
 
           </Modal.Body>
           <Modal.Footer>

@@ -24,7 +24,7 @@ class QuickView extends Component {
 							<p>Contact Name: {this.props.data.contact_name}</p>
 							<p>Contact Number: {this.props.data.contact_number}</p>
 							<p>Account Number: {this.props.data.account_number}</p>
-							<ButtonProposal />
+							<ButtonProposal project_id={this.props.data.project_id} kwh_rate={this.props.data.kwh_rate} project_name={this.props.data.project_name} customer={this.props.data.customer} address={this.props.data.address}/>
 							
 							
 						</div>

@@ -11,6 +11,7 @@ let data = {
 				"contact_name": "John Doe",
 				"contact_number": "2015555555",
 				"account_number": "101000123",
+				"kwh_rate": 0.1,
 				"floors": "Basement, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15",
 				"scheduled_date": "2017-06-01T00:00:00.000Z",
 				"comments": null,
