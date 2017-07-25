@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route, BrowserRouter } from 'react-router-dom';
+import { Redirect, Route, BrowserRouter} from 'react-router-dom';
 import App from './App';
 import Home from './Home/Home';
 import Profile from './Profile/Profile';
@@ -11,10 +11,10 @@ import Dashboard from './components/Dashboard';
 
 
 import history from './history';
-
 const auth = new Auth();
 
 const handleAuthentication = (nextState, replace) => {
+  console.log("Handling authetication, just passed the handleAuthentication function in routes");
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
@@ -122,6 +122,7 @@ export const makeMainRoutes = () => {
           )} />
 
           <Route path="/callback" render={(props) => {
+            console.log("Hit callback route")
             handleAuthentication(props);
             return <Callback {...props} /> 
           }}/>        
@@ -129,3 +130,4 @@ export const makeMainRoutes = () => {
       </BrowserRouter>
   );
 }
+

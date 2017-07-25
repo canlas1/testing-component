@@ -6,11 +6,10 @@ import './App.css';
 //import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import FormComponent from './components/FormComponent';
-import DetailedView from './components/DetailedView/DetailedView';
+
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
-
 
 class App extends Component {
   goTo(route) {
@@ -49,17 +48,7 @@ class App extends Component {
               Home
             </Button>
 
-            {
-              isAuthenticated() && (
-                <Button
-                  bsStyle="primary"
-                  className="btn-margin"
-                  onClick={this.goTo.bind(this, 'profile')}
-                >
-                  Profile
-                </Button>
-              )
-            }
+           
              
 
             {
@@ -91,6 +80,7 @@ class App extends Component {
                 <Dashboard/>
               )}
         
+
          </Form>
 
       </Panel>
@@ -98,6 +88,7 @@ class App extends Component {
 
 
     </div>
+
     );
   }
 }

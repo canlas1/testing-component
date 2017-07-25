@@ -7,14 +7,11 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'auththis.auth0.com',
     clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
-    redirectUri: 'http://localhost:3000' | 'https://energy-logan-testing-component.herokuapp.com/' | 'https://energy-logan-testing-component.herokuapp.com/callback',
+    redirectUri:  'https://energy-logan-testing-component.herokuapp.com/callback', 
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile read:messages'
   });
-
- 
-
 
 // export default class Auth {
 //   auth0 = new auth0.WebAuth({
@@ -39,6 +36,7 @@ export default class Auth {
   }
 
   login() {
+    console.log("Function login in Auth.js is being fired");
     this.auth0.authorize();
   }
 
@@ -56,6 +54,8 @@ export default class Auth {
   }
 
   setSession(authResult) {
+    console.log("Function setSession in Auth.js is being fired")
+    console.log(authResult)
     // Set the time that the access token will expire at
     let expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
@@ -68,6 +68,7 @@ export default class Auth {
   }
 
   getAccessToken() {
+    console.log("Function getAccessToken in Auth.js is being fired")
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
       throw new Error('No access token found');
@@ -76,6 +77,7 @@ export default class Auth {
   }
 
   getProfile(cb) {
+    console.log("Function getProfile in Auth.js is being fired")
     let accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {

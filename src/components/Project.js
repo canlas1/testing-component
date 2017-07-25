@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import QuickView from './QuickView'; 
 import GraphView from './DetailedView/GraphView';
 import DetailedView from './DetailedView/DetailedView';
 //import RenderGraph from './DetailedView/RenderGraph';
 import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
+
+import QuickView from './QuickView/QuickView';
+
 import '../App.css';
 import helpers from '../utils/helpers'
 
