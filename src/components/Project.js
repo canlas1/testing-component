@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
-import QuickView from './QuickView';
+import QuickView from './QuickView/QuickView';
 import '../App.css';
 import helpers from '../utils/helpers'
 

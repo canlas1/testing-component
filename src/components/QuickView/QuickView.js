@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import {Button, Collapse, Well, Glyphicon} from 'react-bootstrap';
-import '../App.css';
+import { Link } from "react-router-dom";
+import {Collapse, Well, Glyphicon} from 'react-bootstrap';
+import '../../App.css';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import ButtonProposal from './ButtonProposal';
+import DetailedView from './../DetailedView/DetailedView';
 
 class QuickView extends Component {
     constructor(props) {
@@ -21,6 +24,9 @@ class QuickView extends Component {
 							<p>Contact Name: {this.props.data.contact_name}</p>
 							<p>Contact Number: {this.props.data.contact_number}</p>
 							<p>Account Number: {this.props.data.account_number}</p>
+							<ButtonProposal />
+							
+							
 						</div>
 					): <p>No data</p>
 					}

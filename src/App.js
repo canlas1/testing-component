@@ -7,10 +7,12 @@ import './App.css';
 //import Login from './components/Login';
 // import Login from './styling/Login.'
 import FormComponent from './components/FormComponent';
-import DetailedView from './components/DetailedView/DetailedView';
+
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
+
+
 
 class App extends Component {
   goTo(route) {
@@ -127,8 +129,9 @@ class App extends Component {
         </Form>
         </Panel>      
         
-        
-        <DetailedView/>
+
+        <DetailedView />
+
         </div>
   </div>
     );
