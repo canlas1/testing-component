@@ -7,7 +7,12 @@ a {
 	background-color: $yellow;
 	color: $almostblack;
 }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a > a{
+	color: $almostblack;
+}
+
 a:hover, a:focus {
     color: $almostblack;
-    text-decoration: underline;
+    text-decoration: none;
 }
