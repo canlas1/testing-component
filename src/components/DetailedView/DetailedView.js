@@ -65,7 +65,7 @@ render() {
     <div className="row">
 
 
-<div className="col-xs-12">  
+<div className="col-xs-6">  
 <h2><b>SUMMARY</b></h2>
 <p>The information contained in this proposal addresses the lighting and labor needs for <span className="text-danger"> 70E 12th Street</span>  </p>
 <p>The report analyzes the current lighting conditions for each building and provides recommendations
@@ -77,11 +77,20 @@ given the following considerations:</p>
 </ul>
 <p>We have included incentive and rebate opportunities where applicable.</p>
 </div>
-</div>
+
 
 <br /><br />
-<div className="row">
+
+
+
+
+
 <div className="col-xs-6">
+ <GraphView chartData = { this.state.chartData } /> 
+ </div>
+</div>
+ <div className="row">
+ <div className="col-xs-12">
     <h2><b>SCOPE OF WORK</b></h2>
     <hr /> 
     <p><b>Project Recommendations</b></p>
@@ -92,12 +101,6 @@ given the following considerations:</p>
         <li>Applying for utility Incentives to Offset project costs</li>
     </ul>
 </div>
-
-
-
-<div className="col-xs-6">
- <GraphView chartData = { this.state.chartData } /> 
- </div>
 
  </div>
  <div className="row">

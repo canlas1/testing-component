@@ -3,8 +3,9 @@ import Bootstrap from 'react-bootstrap';
 import {Button, Modal} from 'react-bootstrap';
 // import Popout from 'react-popout';
 
-import DetailedView from './DetailedView/DetailedView'
-import detailedview from './DetailedView/detailedview.css';
+import DetailedView from './../DetailedView/DetailedView'
+import detailedview from './../DetailedView/detailedview.css';
+import quickview from './quickview.css'
 
 
 
@@ -36,20 +37,17 @@ class ButtonProposal extends Component{
       return (
        
       <div>
-        <p>Click to get the full Modal experience!</p>
-
+        
         <Button
-          bsStyle="primary"
+          bsStyle="warning"
           bsSize="large"
           onClick={this.open}
         >
-          Launch demo modal
+          View Proposal
         </Button>
 
         <Modal dialogClassName="proposal" show={this.state.showModal} onHide={this.close}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
+         
           <Modal.Body>
 
           <DetailedView />
