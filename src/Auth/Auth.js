@@ -10,8 +10,7 @@ export default class Auth {
     redirectUri: 'http://localhost:3000' | 'https://energy-logan-testing-component.herokuapp.com/' | 'https://energy-logan-testing-component.herokuapp.com/callback',
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid profile', 
-    read: 'messages'
+    scope: 'openid profile read:messages'
   });
 
  
