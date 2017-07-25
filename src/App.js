@@ -57,7 +57,7 @@ class App extends Component {
               >
               Log In
               </Button>
-              )};
+              )}
         
 
               {
@@ -69,18 +69,18 @@ class App extends Component {
                 >
                 Log Out
                 </Button>
-              )};
+              )}
 
 
               {             
               isAuthenticated() && (
                 <Dashboard/>
-              )};
+              )}
         
          </Form>
 
       </Panel>
-      
+
     </div>
     );
   }

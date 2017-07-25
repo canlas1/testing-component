@@ -2,15 +2,29 @@ import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../history';
 
+
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: AUTH_CONFIG.domain,
-    clientID: AUTH_CONFIG.clientId,
-    redirectUri: AUTH_CONFIG.callbackUrl,
-    audience: AUTH_CONFIG.apiUrl,
+    domain: 'auththis.auth0.com',
+    clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
+    redirectUri: 'http://localhost:3000/callback',
+    audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile read:messages'
   });
+
+ 
+
+
+// export default class Auth {
+//   auth0 = new auth0.WebAuth({
+//     domain: AUTH_CONFIG.domain,
+//     clientID: AUTH_CONFIG.clientId,
+//     redirectUri: AUTH_CONFIG.callbackUrl,
+//     audience: AUTH_CONFIG.apiUrl,
+//     responseType: 'token id_token',
+//     scope: 'openid profile read:messages'
+//   });
 
   userProfile;
 
