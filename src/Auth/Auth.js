@@ -7,10 +7,11 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'auththis.auth0.com',
     clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
-    redirectUri: 'http://localhost:3000/callback',
+    redirectUri: 'https://energy-logan-testing-component.herokuapp.com/callback',
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid profile read:messages'
+    scope: 'openid profile', 
+    read: 'messages'
   });
 
  
