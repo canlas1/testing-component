@@ -3,3 +3,9 @@
     width: 1200px; 
     padding-left: 0px;
 }
+
+.btn-default {
+    color: #ffffff;
+    background-color: #f1c40f;
+    border-style: none;
+}

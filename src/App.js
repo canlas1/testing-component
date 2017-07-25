@@ -128,10 +128,6 @@ class App extends Component {
             }
         </Form>
         </Panel>      
-        
-
-        <DetailedView />
-
         </div>
   </div>
     );
