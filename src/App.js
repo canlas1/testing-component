@@ -28,7 +28,9 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
-      <div className="col-md-6 col-md-offset-6">
+      <div className="col-md-6 col-md-center-6">
+      <Row className="col-md-6 col-md-center-6">
+
         <h1 className="login-brand-text">Login Portal!</h1>
         
         <Panel header className="login-panel">  
@@ -80,6 +82,8 @@ class App extends Component {
          </Form>
 
       </Panel>
+      </Row>
+
 
     </div>
     );
