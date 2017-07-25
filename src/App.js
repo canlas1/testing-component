@@ -130,9 +130,6 @@ class App extends Component {
             }
         </Form>
         </Panel>      
-        
-
-
 
         </div>
   </div>
