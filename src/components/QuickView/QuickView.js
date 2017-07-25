@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 import {Collapse, Well, Glyphicon} from 'react-bootstrap';
-import '../App.css';
+import '../../App.css';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
 import ButtonProposal from './ButtonProposal';
-import DetailedView from './DetailedView/DetailedView';
+import DetailedView from './../DetailedView/DetailedView';
 
 class QuickView extends Component {
     constructor(props) {
