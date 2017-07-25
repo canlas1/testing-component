@@ -11,6 +11,7 @@ import FormComponent from './components/FormComponent';
 import TopNav from './components/TopNav';
 import SideBar from './components/SideBar';
 import Project from './components/Project';
+import Resources from './components/Resources/Resources';
 
 
 
@@ -44,6 +45,7 @@ class App extends Component {
     		        <Col lg={9}><br/>
                   <Route path="/viewProject" component={Project}/>
                   <Route path="/addProject" component={FormComponent}/>
+                  <Route path="/resources" component={Resources}/>
     				</Col>		        
     		    </Row>
     		</Grid>
@@ -130,7 +132,7 @@ class App extends Component {
         </Panel>      
         
 
-        <DetailedView />
+
 
         </div>
   </div>

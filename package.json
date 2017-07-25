@@ -41,6 +41,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "axios": "^0.16.2",
     "babel-loader": "^7.1.1",
     "react-svg-loader": "^1.1.1"
   }
