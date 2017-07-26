@@ -11,6 +11,37 @@ if (!process.env.AUTH0_DOMAIN || !process.env.AUTH0_AUDIENCE) {
   throw 'Make sure you have AUTH0_DOMAIN, and AUTH0_AUDIENCE in your .env file'
 }
 
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+mongoose.Promise = Promise;
+
+//use morgan logger and bodyparser
+app.use(logger('dev'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+// Serves static content for the app from the "public" directory
+app.use(express.static(process.cwd() + "/public"));
+
+//mongoose connection
+let db = mongoose.connection;
+
+if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI);
+} else {
+    mongoose.connect(`mongodb://localhost/energyLogan`);
+}
+
+// Show any mongoose errors
+db.on("error", function(error) {
+    console.log("Mongoose Error: ", error);
+});
+
+// Once logged in to the db through mongoose, log a success message
+db.once("open", function() {
+    console.log("Mongoose connection successful.");
+});
+
 app.use(cors());
 app.use(morgan('API Request (port 3001): :method :url :status :response-time ms - :res[content-length]'));
 

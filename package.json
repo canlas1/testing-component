@@ -34,7 +34,9 @@
     "react-scripts": "1.0.10",
     "react-side-bar": "^0.3.5",
     "react-sidebar": "^2.3.2",
-    "style-loader": "^0.18.2"
+    "style-loader": "^0.18.2", 
+    "babel-loader": "^7.1.1",
+    "react-svg-loader": "^1.1.1"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -46,7 +48,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-loader": "^7.1.1",
-    "react-svg-loader": "^1.1.1"
+    
   }
 }
