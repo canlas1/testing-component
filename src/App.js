@@ -34,26 +34,7 @@ class App extends Component {
       <TopNav />
       <Row className="col-md-6 col-md-center-6">
 
-        <h1 className="login-brand-text">Login Portal!</h1>
-        
-        <Panel header className="login-panel">  
-        
-
-          <Form
-          onSubmit={data => console.log(data)}
-          onError={(errors, data) => console.log('error', errors, data)}
-          >
-
-
-            <Button
-              bsStyle="primary"
-              className="btn-margin"
-              onClick={this.goTo.bind(this, 'home')}
-              >
-              Home
-            </Button>
-
-           
+              
              
 
             {

@@ -28,16 +28,9 @@ class Project extends Component {
 		return (
 			<div id="ProjectDiv">
 
-				<h3 className="pl">Project List</h3>				
-				<ListGroup>
-	        {this.state.projects.map(function(project) {
-	           return (<ListGroupItem>{project.project_name} 
-	           				    	
-	           				    </ListGroupItem>);
-	        })}
-				</ListGroup>
+			
 		
-			<div>
+		
 			
 				<Panel header={title}>
 			      	<ListGroup fill>
@@ -46,11 +39,9 @@ class Project extends Component {
 			        })}
 					</ListGroup>
 			    </Panel>		    
-			</div>
+			
 			 
-			<div>
-				<GraphView/>
-			</div>
+			
 				</div>		
 		)
 	}
