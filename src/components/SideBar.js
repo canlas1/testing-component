@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Sidebar from 'react-side-bar';
-import FormComponent from './FormComponent';
+//import Sidebar from 'react-side-bar';
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 import {Tab, Row, Col, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import '../App.css';
 
@@ -20,10 +20,14 @@ class SideBar extends Component {
  
         <Nav bsStyle="pills" stacked>
           <NavItem eventKey="first">
-            <Glyphicon glyph="list-alt" /> View Project
+            <Link to="/viewProject"><div>
+              <Glyphicon glyph="list-alt" /> View Project</div>
+            </Link>
           </NavItem>
           <NavItem eventKey="second">
-            <Glyphicon glyph="plus" /> Add Project
+            <Link to="/addProject"><div>
+              <Glyphicon glyph="plus" /> Add Project</div>
+            </Link>
           </NavItem>
         </Nav>
 
