@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Redirect, Link, Route, BrowserRouter as Router } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
 //import Login from './components/Login';
@@ -42,6 +42,7 @@ class App extends Component {
     		        	<SideBar />	        	
     		        </Col>
     		        <Col lg={9}><br/>
+                  <Redirect from="/" to="/viewProject" />
                   <Route path="/viewProject" component={Project}/>
                   <Route path="/addProject" component={FormComponent}/>
     				</Col>		        

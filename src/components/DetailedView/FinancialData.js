@@ -32,7 +32,7 @@ render() {
     </tr>
      <tr>
         <td><b>kWh saved</b></td>
-        <td className="text-danger">{(this.props.incentiveData.kwh_saved).toFixed(2)}</td>
+        <td className="text-danger">{helpers.formatDollar(this.props.incentiveData.kwh_saved)} kWh</td>
     </tr>
      <tr>
         <td><b>kWh Rate</b></td>
@@ -40,7 +40,7 @@ render() {
     </tr>
      <tr>
         <td><b>Reduced Maintenance Costs</b></td>
-        <td className="text-danger">${helpers.formatDollar(this.props.incentiveData.reduced_maintenance_cost)}</td>
+       <td className="text-danger">${helpers.formatDollar(this.props.incentiveData.total_maintenance_saving)}</td>
     </tr>
     <tr>
         <td><b>Payback</b></td>
@@ -52,7 +52,7 @@ render() {
     </tr>
     <tr>
         <td><b>10 Year Life Cycle Savings</b></td>
-        <td className="text-danger">${(this.props.incentiveData.ten_year).toFixed(2)}</td>
+        <td className="text-danger">${helpers.formatDollar(this.props.incentiveData.ten_year)}</td>
     </tr>
 </tbody>
 </table>

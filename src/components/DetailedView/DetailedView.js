@@ -117,7 +117,7 @@ given the following considerations:</p>
 
 <page size="A4">
 
-<TableDetailedView />
+<TableDetailedView surveyDatatArr={this.state.incentiveData.surveyDatatArr} />
 </page>
 </div>
 
