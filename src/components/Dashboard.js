@@ -11,6 +11,9 @@ import Resources from './Resources/Resources';
 import Account from './Account/Account';
 
 class Dashboard extends Component {
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
