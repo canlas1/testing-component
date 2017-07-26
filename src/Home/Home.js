@@ -7,6 +7,7 @@ class Home extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
   }
+
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
@@ -14,14 +15,14 @@ class Home extends Component {
         {
           isAuthenticated() && (
             <div>
+              <Dashboard />
               <h4>
-                You are logged in!
-                <Dashboard />
+                You are logged in!                
               </h4>
             </div>
             )
         }
-         {
+        {
           isAuthenticated() && (
               <Button
                   bsStyle="primary"

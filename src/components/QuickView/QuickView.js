@@ -36,5 +36,4 @@ class QuickView extends Component {
 		);
 	}
 }
-
 export default QuickView;

@@ -6,10 +6,15 @@ import Profile from './Profile/Profile';
 import Ping from './Ping/Ping';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
+import Project from './components/Project';
+import Dashboard from './components/Dashboard';
+
+
 import history from './history';
 const auth = new Auth();
 
 const handleAuthentication = (nextState, replace) => {
+  console.log("Handling authetication, just passed the handleAuthentication function in routes");
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
@@ -28,6 +33,7 @@ export const makeMainRoutes = () => {
               <Profile auth={auth} {...props} />
             )
           )} />
+
           <Route path="/ping" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>
@@ -35,7 +41,88 @@ export const makeMainRoutes = () => {
               <Ping auth={auth} {...props} />
             )
           )} />
+
+           <Route path="/dashboard" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+           <Route path="/profile" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+          <Route path="/project" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+          <Route path="/detailed-view" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+           <Route path="/financial-view" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+            <Route path="/table-detailed-view" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+              <Route path="/graph-view" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+          <Route path="/quick-view" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+          <Route path="/side-bar" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
+          <Route path="/top-nav" render={(props) => (
+            !auth.isAuthenticated() ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Project auth={auth} {...props} />
+            )
+          )} />
+
           <Route path="/callback" render={(props) => {
+            console.log("Hit callback route")
             handleAuthentication(props);
             return <Callback {...props} /> 
           }}/>        

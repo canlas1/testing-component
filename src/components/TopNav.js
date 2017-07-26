@@ -3,8 +3,13 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import '../App.css';
+import App from '../App.js'
 
 class TopNav extends Component {
+
+	logout() {
+    this.props.auth.logout();
+  }
 	render() {
 		return (
 			<div id="TopNavDiv">
