@@ -11,10 +11,7 @@ class SideBar extends Component {
 		return (
 			<div id="SideBarDiv">
 			
-				<p>SAD BAR</p>
-				<div>
 				
-				<FormComponent/>
 				<Tab.Container defaultActiveKey="first">
 
  
@@ -33,7 +30,7 @@ class SideBar extends Component {
 
   </Tab.Container>
 			</div>
-			</div>
+			
 			
 		)
 	}

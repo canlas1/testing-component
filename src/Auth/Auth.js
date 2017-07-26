@@ -7,13 +7,14 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'auththis.auth0.com',
     clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
-    redirectUri:  'https://energy-logan-testing-component.herokuapp.com/callback', 
+    redirectUri: AUTH_CONFIG.callbackUrl, 
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile read:messages'
   });
 
 // export default class Auth {
+//  'https://energy-logan-testing-component.herokuapp.com/callback' || 
 //   auth0 = new auth0.WebAuth({
 //     domain: AUTH_CONFIG.domain,
 //     clientID: AUTH_CONFIG.clientId,
