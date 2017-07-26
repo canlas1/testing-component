@@ -25,7 +25,7 @@ class TopNav extends Component {
                         <Link to="/resources">Resource</Link>
                     </NavItem>
                       <NavItem className="navlist" eventKey={2} href="#">
-                          <Link to="/account">Account</Link>
+                          Account
                       </NavItem>
                        <NavItem className="navlist" eventKey={3} href="#">Logout</NavItem>
                 </Nav>

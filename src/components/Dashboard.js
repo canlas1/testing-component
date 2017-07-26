@@ -8,7 +8,6 @@ import SideBar from './SideBar';
 import Project from './Project';
 import FormComponent from './FormComponent';
 import Resources from './Resources/Resources';
-import Account from './Account/Account';
 
 
 class Dashboard extends Component{
@@ -42,7 +41,7 @@ class Dashboard extends Component{
                 <Route path="/viewProject" component={Project} />
                 <Route path="/addProject" component={FormComponent} />
                 <Route path="/resources" component={Resources} />
-                <Route path="/account" component={Account} />
+               
             
             </Col>
           </Row>
