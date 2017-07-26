@@ -9,7 +9,7 @@ class TopNav extends Component {
 			<Navbar inverse collapseOnSelect>
 			<Navbar.Header>
       			<Navbar.Brand>
-        			<a href="#" id="brandlogo">EnergyLoganSale</a>
+        			<a href="#" id="brandlogo">Energy Logan Sales Portal</a>
 			    </Navbar.Brand>
 			<Navbar.Toggle />
     		</Navbar.Header>
