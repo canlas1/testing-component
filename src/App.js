@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Redirect, Link, Route, BrowserRouter as Router } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
 //import Login from './components/Login';
@@ -33,9 +33,6 @@ class App extends Component {
       <div className="col-md-6 col-md-center-6">
       <TopNav />
       <Row className="col-md-6 col-md-center-6">
-
-              
-             
 
             {
             !isAuthenticated() && (

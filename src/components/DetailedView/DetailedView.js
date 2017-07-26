@@ -18,10 +18,12 @@ class DetailedView extends Component{
 
 
     componentWillMount() {
-        this.getChartData();
+        var incentiveData = helpers.getProjectIncentives(this.props.project_id, this.props.kwh_rate);
+        this.setState({incentiveData: incentiveData});
+        this.getChartData(incentiveData);
     }
 
-    getChartData() {
+    getChartData(incentiveData) {
 
         //TODO: AJAX call here!!!!!
 
@@ -37,8 +39,8 @@ class DetailedView extends Component{
                 labels: ["Existing", "Proposed"],
 
                 datasets: [{
-                    label: "Savings",
-                    data: [15706, 5431],
+                    label: "Annual Operation Cost($)",
+                    data: [incentiveData.sumPreOpCost.toFixed(2), incentiveData.sumPostOpCost.toFixed(2)],
                      backgroundColor: [
                     'rgba(255,166,22,.7)',
                     'rgba(0,0,0,.7)'
@@ -57,17 +59,17 @@ render() {
              <page size="A4">
              <div id="header">
 
-             <h1 className="text-right"><b>YOUR COMPANY NAME</b></h1>
+             <h1 className="text-right"><b>{this.props.customer.toUpperCase()}</b></h1>
 
              </div>
-        <h1 id="makeityellow"><b>LIGHTING PROPOSAL: <span className="text-danger"> THE PROJECT</span></b></h1>
+        <h1 id="makeityellow"><b>LIGHTING PROPOSAL: <span className="text-danger"> {this.props.project_name.toUpperCase()}</span></b></h1>
         <hr />
     <div className="row">
 
 
 <div className="col-xs-6">  
 <h2><b>SUMMARY</b></h2>
-<p>The information contained in this proposal addresses the lighting and labor needs for <span className="text-danger"> 70E 12th Street</span>  </p>
+<p>The information contained in this proposal addresses the lighting and labor needs for <span className="text-danger"> {this.props.address}</span>  </p>
 <p>The report analyzes the current lighting conditions for each building and provides recommendations
 given the following considerations:</p>
 <ul>
@@ -106,7 +108,7 @@ given the following considerations:</p>
  <div className="row">
 
 
-<FinancialData />
+<FinancialData incentiveData={this.state.incentiveData}/>
 
 
 </div>
@@ -115,7 +117,7 @@ given the following considerations:</p>
 
 <page size="A4">
 
-<TableDetailedView />
+<TableDetailedView surveyDatatArr={this.state.incentiveData.surveyDatatArr} />
 </page>
 </div>
 
