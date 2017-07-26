@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import GraphView from './DetailedView/GraphView';
 import DetailedView from './DetailedView/DetailedView';
-//import RenderGraph from './DetailedView/RenderGraph';
 import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
 
 import QuickView from './QuickView/QuickView';
@@ -17,7 +16,6 @@ class Project extends Component {
 	    this.state = {projects:[]};
     }
     componentDidMount(){
-  	    // console.log ('PROJECTS', )
 	  	let userProjectsArr = helpers.getUserProjects()
 	  	this.setState({projects:userProjectsArr})
 	  	helpers.getProjectIncentives(1)
