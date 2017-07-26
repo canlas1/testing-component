@@ -68,9 +68,7 @@ class App extends Component {
               )}
         
 
-         </Form>
-
-      </Panel>
+     
       </Row>
 
 
