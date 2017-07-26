@@ -6,7 +6,7 @@ let data = {
 			{
 				"project_id": 1,
 				"project_name": "161 Newkirk",
-				"customer": "Rutgers",
+				"customer": "Rutgers University",
 				"address": "161 Newkirk, Jersey City, NJ",
 				"contact_name": "John Doe",
 				"contact_number": "2015555555",

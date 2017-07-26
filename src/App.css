@@ -1,9 +1,23 @@
+.logologin {
+  background-color: red;
+  text-align: center; }
+
 #brandlogo {
   color: #f1c40f; }
 
 
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #f1c40f; }
+
+.bar {
+  line-height: 80px;
+  height: 80px;
+  padding-top: 12px; }
+
+.barbrand {
+  line-height: 75px;
+  height: 75px;
+  padding-bottom: 10px; }
 
 a {
   color: #f1c40f; }
@@ -22,4 +36,5 @@ a:hover, a:focus {
 #pl {
   color: #f1c40f;
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+  font-size: 30px; }

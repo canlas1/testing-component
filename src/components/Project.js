@@ -22,7 +22,7 @@ class Project extends Component {
     }
 
 	render() {
-		const title = (<h4 id="pl">Project List</h4>);
+		const title = (<h1 id="pl">Project List</h1>);
 		return (
 			<div id="ProjectDiv">
 

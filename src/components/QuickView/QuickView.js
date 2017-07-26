@@ -12,8 +12,8 @@ class QuickView extends Component {
         this.state = {};
     }
 	render() {
-		return (<ListGroupItem onClick={ ()=> this.setState({ open: !this.state.open })}>
-			<Glyphicon glyph="menu-down" /> &nbsp;&nbsp;  <strong>{this.props.data.project_name}</strong>
+		return (<ListGroupItem onClick={ ()=> this.setState({ open: !this.state.open })}><h3>
+			<Glyphicon glyph="menu-down" /> &nbsp;&nbsp;  <strong>{this.props.data.project_name}</strong></h3>
 			<div className="QuickViewDiv">
 				<Collapse in={this.state.open}>
 					{(this.props.data) ? (

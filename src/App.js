@@ -6,12 +6,10 @@ import { Redirect, Link, Route, BrowserRouter as Router } from 'react-router-dom
 import './App.css';
 //import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-import FormComponent from './components/FormComponent';
 
-import TopNav from './components/TopNav';
-import SideBar from './components/SideBar';
-import Project from './components/Project';
-import Resources from './components/Resources/Resources';
+
+import TopNav from './components/TopNav/TopNav';
+
 
 class App extends Component {
   goTo(route) {
@@ -30,19 +28,30 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
     return (
 
-      <div className="col-md-6 col-md-center-6">
-      <TopNav />
-      <Row className="col-md-6 col-md-center-6">
+       <Row  className="content">
+       <TopNav />
 
             {
             !isAuthenticated() && (
+
+             
+              <div className="logologin">
+
+              <img src={require('./components/TopNav/logo-icon.png')} />
+              
+
+           <div>
               <Button
+
                 bsStyle="primary"
                 className="btn-margin"
                 onClick={this.login.bind(this)}
                 >
               Log In
               </Button>
+              </div>
+              </div>
+             
               )}
         
 
@@ -64,12 +73,14 @@ class App extends Component {
                 <Dashboard/>
               )}
         
-
+              <div className="background">
+              Some background
+              </div>
      
       </Row>
+     
 
 
-    </div>
 
     );
   }

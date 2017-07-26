@@ -38,8 +38,8 @@ class ButtonProposal extends Component{
        
       <div>
         
-        <Button onClick={this.open}>
-          View Proposal
+        <Button bsSize="large" onClick={this.open}>
+         <b> View Proposal </b>
         </Button>
 
         <Modal dialogClassName="proposal" show={this.state.showModal} onHide={this.close}>

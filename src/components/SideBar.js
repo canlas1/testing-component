@@ -19,14 +19,20 @@ class SideBar extends Component {
         <Nav bsStyle="pills" stacked>
           <NavItem eventKey="first">
             <Link to="/viewProject"><div>
-              <Glyphicon glyph="list-alt" /> View Project</div>
+             <h3><b> <Glyphicon glyph="list-alt" /> View Project</b></h3></div>
             </Link>
           </NavItem>
           <NavItem eventKey="second">
             <Link to="/addProject"><div>
-              <Glyphicon glyph="plus" /> Add Project</div>
+             <h3><b> <Glyphicon glyph="plus" /> Add Project</b></h3></div>
             </Link>
           </NavItem>
+          <NavItem eventKey="third">
+            <Link to="/resources"><div>
+             <h3><b> <Glyphicon glyph="list-alt" /> Resources</b></h3></div>
+            </Link>
+          </NavItem>
+
         </Nav>
 
   </Tab.Container>

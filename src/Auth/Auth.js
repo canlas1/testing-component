@@ -7,12 +7,15 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'auththis.auth0.com',
     clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
-    redirectUri:  'https://protected-reaches-84027.herokuapp.com/callback', 
+    redirectUri:  'http://localhost:3000/callback', 
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile read:messages'
   });
 
+
+
+//protected-reaches-84027.herokuapp.com  add https before dashes
 // export default class Auth {
 //   auth0 = new auth0.WebAuth({
 //     domain: AUTH_CONFIG.domain,
@@ -23,7 +26,7 @@ export default class Auth {
 //     scope: 'openid profile read:messages'
 //   });
 
-  userProfile;
+  // userProfile;
 
   constructor() {
     this.login = this.login.bind(this);
