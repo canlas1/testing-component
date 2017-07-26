@@ -1,18 +1,43 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Project from '../components/Project';
+import TopNav from '../components/TopNav';
+import SideBar from '../components/SideBar';
+import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
+import App from '../App.js'
 
 class Home extends Component {
+  
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
       <div className="container">
         {
           isAuthenticated() && (
+            <div>
               <h4>
                 You are logged in!
+                <TopNav/>
               </h4>
+            </div>
             )
         }
+         {
+          isAuthenticated() && (
+              <Button
+                  bsStyle="primary"
+                  className="btn-margin"
+                  onClick={this.goTo.bind(this, 'profile')}
+                >
+                  Profile
+                </Button>
+              )
+            }
+
         {
           !isAuthenticated() && (
               <h4>
