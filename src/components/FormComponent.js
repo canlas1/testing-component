@@ -33,17 +33,8 @@ class FormComponent extends React.Component {
       kwh_rate:'',
       notes:''
     }
-   
-   //Here we set a generic state assocated with the text being searched for
+
   }
-
-//  handleCheckBox(event){
-//   console.log('event',event)
-//   let newState = {};
-//   newState[this.data.radioGroup]=event.target.value;
-//   // this.setState(newState)  
-// }
-
 
  handleChange(event){
     let newState = {};
