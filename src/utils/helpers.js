@@ -1,7 +1,13 @@
-// import axios from 'axios'
+import axios from 'axios'
 import data from './data'
 
-export default {
+      
+
+export default{
+
+               
+
+
 
     // getProjectSummary(project_id) {
     //     let queryURL = `https://energy-logan.herokuapp.com/api/projects/${project_id}`
@@ -36,6 +42,18 @@ export default {
     getProjectIncentives(project_id) {
         let project = data.projects.project_id
         console.log("PROJECT",project)
-    }
+    },
+
+
+
+
+
 
 };
+
+
+
+
+
+
+

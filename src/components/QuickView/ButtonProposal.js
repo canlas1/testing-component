@@ -38,11 +38,7 @@ class ButtonProposal extends Component{
        
       <div>
         
-        <Button
-          bsStyle="warning"
-          bsSize="large"
-          onClick={this.open}
-        >
+        <Button onClick={this.open}>
           View Proposal
         </Button>
 

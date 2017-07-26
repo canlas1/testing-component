@@ -4,7 +4,8 @@ import Project from '../components/Project';
 import TopNav from '../components/TopNav';
 import SideBar from '../components/SideBar';
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
-import App from '../App.js'
+import App from '../App.js';
+import Dashboard from './../components/Dashboard';
 
 class Home extends Component {
   
@@ -21,20 +22,22 @@ class Home extends Component {
             <div>
               <h4>
                 You are logged in!
-                <TopNav/>
+           
               </h4>
             </div>
             )
         }
          {
           isAuthenticated() && (
-              <Button
-                  bsStyle="primary"
-                  className="btn-margin"
-                  onClick={this.goTo.bind(this, 'profile')}
-                >
-                  Profile
-                </Button>
+
+              <Dashboard />
+              // <Button
+              //     bsStyle="primary"
+              //     className="btn-margin"
+              //     onClick={this.goTo.bind(this, 'profile')}
+              //   >
+              //     Profile
+              //   </Button>
               )
             }
 

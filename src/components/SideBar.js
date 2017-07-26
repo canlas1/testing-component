@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
 import Sidebar from 'react-side-bar';
 import FormComponent from './FormComponent';
+
 import {Tab, Row, Col, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import '../App.css';
 
@@ -11,25 +13,25 @@ class SideBar extends Component {
 		return (
 			<div id="SideBarDiv">
 			
-				<p>SAD BAR</p>
-				<div>
-				
-				<FormComponent/>
 				<Tab.Container defaultActiveKey="first">
 
  
         <Nav bsStyle="pills" stacked>
           <NavItem eventKey="first">
-            <Glyphicon glyph="list-alt" /> View Project
+            <Link to="/viewProject"><div>
+              <Glyphicon glyph="list-alt" /> View Project</div>
+            </Link>
           </NavItem>
           <NavItem eventKey="second">
-            <Glyphicon glyph="plus" /> Add Project
+            <Link to="/addProject"><div>
+              <Glyphicon glyph="plus" /> Add Project</div>
+            </Link>
           </NavItem>
         </Nav>
 
   </Tab.Container>
 			</div>
-			</div>
+		
 			
 		)
 	}
