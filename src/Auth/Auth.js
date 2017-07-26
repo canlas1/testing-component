@@ -7,7 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'auththis.auth0.com',
     clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
-    redirectUri:  'https://salesportal-energylogan.herokuapp.com/callback', 
+    redirectUri:  'https://protected-reaches-84027.herokuapp.com/callback', 
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile read:messages'
