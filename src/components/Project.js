@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import GraphView from './DetailedView/GraphView';
-import DetailedView from './DetailedView/DetailedView';
-import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Panel, ListGroup } from 'react-bootstrap';
 
 import QuickView from './QuickView/QuickView';
 

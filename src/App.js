@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
-import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
-import { Redirect, Link, Route, BrowserRouter as Router } from 'react-router-dom';
-// import logo from './logo.svg';
+import { Row, Button } from 'react-bootstrap';
 import './App.css';
-//import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-
-
 import TopNav from './components/TopNav/TopNav';
 
 

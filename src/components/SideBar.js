@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
-import Sidebar from 'react-side-bar';
-import FormComponent from './FormComponent';
-
-import {Tab, Row, Col, Nav, NavItem, Glyphicon} from 'react-bootstrap';
+import {Tab, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import '../App.css';
 
 

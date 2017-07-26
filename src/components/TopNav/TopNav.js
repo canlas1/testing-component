@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../../App.css';
-import App from '../../App.js';
-
-
 
 class TopNav extends Component {
 

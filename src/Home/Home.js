@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Panel, Form, FormControl, Checkbox, Modal } from 'react-bootstrap';
-import App from '../App.js';
+import { Button, Modal } from 'react-bootstrap';
 import Dashboard from './../components/Dashboard';
 
 class Home extends Component {

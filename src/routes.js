@@ -6,7 +6,6 @@ import Profile from './Profile/Profile';
 import Ping from './Ping/Ping';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
-import Project from './components/Project';
 import Dashboard from './components/Dashboard';
 
 

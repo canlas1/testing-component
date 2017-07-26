@@ -5,8 +5,8 @@ import {
   ControlLabel,
   FormControl,
   FormGroup,
-  HelpBlock,
-  Radio } from 'react-bootstrap';
+  HelpBlock
+} from 'react-bootstrap';
 import helpers from '../utils/helpers';
 
 function FieldGroup({ id, label, help, ...props }) {
