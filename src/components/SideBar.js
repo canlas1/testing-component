@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-//import Sidebar from 'react-side-bar';
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import Sidebar from 'react-side-bar';
+import FormComponent from './FormComponent';
+
 import {Tab, Row, Col, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import '../App.css';
 
@@ -10,6 +12,7 @@ class SideBar extends Component {
 	render() {
 		return (
 			<div id="SideBarDiv">
+			
 				<Tab.Container defaultActiveKey="first">
 
  
@@ -26,9 +29,10 @@ class SideBar extends Component {
           </NavItem>
         </Nav>
 
-
   </Tab.Container>
 			</div>
+		
+			
 		)
 	}
 }
