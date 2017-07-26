@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import {NavItem, Glyphicon, Grid, Row, Col } from 'react-bootstrap';
-//import FormComponent from './FormComponent';
-//import DetailedView from './DetailedView/DetailedView';
-import TopNav from './TopNav';
+import { Grid, Row, Col } from 'react-bootstrap';
+import { Redirect, Route } from 'react-router-dom';
+import './../App.css';
+
+// import TopNav from './TopNav';
 import SideBar from './SideBar';
 import Project from './Project';
-import '../App.css';
+import FormComponent from './FormComponent';
+import Resources from './Resources/Resources';
+import Account from './Account/Account';
 
 
 class Dashboard extends Component{
+
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+  
   render(){
     return(
 
@@ -30,7 +38,11 @@ class Dashboard extends Component{
             </Col>
             <Col lg={9}><br/>
             
-              <Project />
+              <Redirect from="/" to="/viewProject" />
+                <Route path="/viewProject" component={Project} />
+                <Route path="/addProject" component={FormComponent} />
+                <Route path="/resources" component={Resources} />
+                <Route path="/account" component={Account} />
             
             </Col>
           </Row>

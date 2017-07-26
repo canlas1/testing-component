@@ -46,80 +46,10 @@ export const makeMainRoutes = () => {
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>
             ) : (
-              <Project auth={auth} {...props} />
+              <Dashboard auth={auth} {...props} />
             )
           )} />
-
-           <Route path="/profile" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-          <Route path="/project" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-          <Route path="/detailed-view" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-           <Route path="/financial-view" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-            <Route path="/table-detailed-view" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-              <Route path="/graph-view" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-          <Route path="/quick-view" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-          <Route path="/side-bar" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
-
-          <Route path="/top-nav" render={(props) => (
-            !auth.isAuthenticated() ? (
-              <Redirect to="/home"/>
-            ) : (
-              <Project auth={auth} {...props} />
-            )
-          )} />
+           
 
           <Route path="/callback" render={(props) => {
             console.log("Hit callback route")

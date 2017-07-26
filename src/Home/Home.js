@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Project from '../components/Project';
-import TopNav from '../components/TopNav';
-import SideBar from '../components/SideBar';
+
 import { Button, Panel, Form, FormControl, Checkbox } from 'react-bootstrap';
 import App from '../App.js';
 import Dashboard from './../components/Dashboard';

@@ -38,7 +38,7 @@ class Project extends Component {
 				</ListGroup>
 		
 			<div>
-				<DetailedView/>
+			
 				<Panel header={title}>
 			      	<ListGroup fill>
 			        	{this.state.projects.map(function(project) {
