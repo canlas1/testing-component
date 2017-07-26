@@ -31,6 +31,7 @@ class App extends Component {
     return (
 
       <div className="col-md-6 col-md-center-6">
+      <TopNav />
       <Row className="col-md-6 col-md-center-6">
 
         <h1 className="login-brand-text">Login Portal!</h1>

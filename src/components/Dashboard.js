@@ -18,7 +18,7 @@ class Dashboard extends Component{
           <Row className="show-grid">
             <Col><br/>
               
-              <TopNav />
+              
             
             </Col>
           </Row>
