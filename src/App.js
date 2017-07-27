@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
-      <div  className="content">
+      <Row  className="content">
         <TopNav auth={this.props.auth}/>
           {
             !isAuthenticated() && (
@@ -37,20 +37,18 @@ class App extends Component {
                 <div><Button id="loginBtn" onClick={this.login.bind(this)}>
                   Log In
                 </Button></div>
-              </div>
-            </div>
+              </div></div>
             )
           }
           {             
             isAuthenticated() && (
-              <Dashboard/>
+              <Dashboard auth={this.props.auth}/>
             )
           }
-      </div>
-   );
+      </Row>
+    );
   }
 }
-
 
 export default App;
 

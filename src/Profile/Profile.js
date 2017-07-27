@@ -4,6 +4,7 @@ import './Profile.css';
 
 class Profile extends Component {
   componentWillMount() {
+    console.log("aqui ", this.props);
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
     if (!userProfile) {

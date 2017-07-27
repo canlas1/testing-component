@@ -50,7 +50,7 @@ class Home extends Component {
          {
           isAuthenticated() && (
 
-              <Dashboard />
+              <Dashboard auth={this.props.auth} />
               // <Button
               //     bsStyle="primary"
               //     className="btn-margin"
