@@ -8,8 +8,9 @@ import SideBar from './SideBar';
 import Project from './Project';
 import FormComponent from './FormComponent';
 import Resources from './Resources/Resources';
+import Profile from '../Profile/Profile';
 
-
+  
 class Dashboard extends Component{
 
   goTo(route) {
@@ -41,7 +42,7 @@ class Dashboard extends Component{
                 <Route path="/viewProject" component={Project} />
                 <Route path="/addProject" component={FormComponent} />
                 <Route path="/resources" component={Resources} />
-               
+               <Route path="/profile" render={(props) => <Profile auth={this.props.auth} {...props} />} />
             
             </Col>
           </Row>
