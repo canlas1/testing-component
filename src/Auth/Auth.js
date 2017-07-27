@@ -7,7 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'auththis.auth0.com',
     clientID: '49zmmUdiwD3dbEz4tqaWqjVVxalSRAeT',
-    redirectUri:  'https://protected-reaches-84027.herokuapp.com/callback', 
+    redirectUri:  'http://protected-reaches-84027.herokuapp.com/callback', 
     audience: 'https://auththis.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile read:messages'
@@ -16,17 +16,7 @@ export default class Auth {
 
 
 //protected-reaches-84027.herokuapp.com  add https before dashes
-// export default class Auth {
-//   auth0 = new auth0.WebAuth({
-//     domain: AUTH_CONFIG.domain,
-//     clientID: AUTH_CONFIG.clientId,
-//     redirectUri: AUTH_CONFIG.callbackUrl,
-//     audience: AUTH_CONFIG.apiUrl,
-//     responseType: 'token id_token',
-//     scope: 'openid profile read:messages'
-//   });
 
-  // userProfile;
 
   constructor() {
     this.login = this.login.bind(this);

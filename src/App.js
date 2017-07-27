@@ -8,7 +8,8 @@ import Background from './styling/goldnyc.jpg';
 var loginStyle = {
   height: "800px",
   width: "100%",
-  backgroundImage: `url(${Background})`
+  backgroundImage: `url(${Background})`,
+  backgroundSize: "cover"
 }
 
 class App extends Component {
