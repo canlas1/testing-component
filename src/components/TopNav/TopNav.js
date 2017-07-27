@@ -9,6 +9,7 @@ class TopNav extends Component {
     this.props.auth.logout();
   }
 	render() {
+    const { isAuthenticated } = this.props.auth;
 		return (
 			  <div id="TopNavDiv">
             <Navbar inverse collapseOnSelect>
@@ -20,13 +21,19 @@ class TopNav extends Component {
             </Navbar.Header>
             <Navbar.Collapse className="bar">
                 <Nav pullRight>
+                      {
+                      isAuthenticated() && (
                     <NavItem className="navlist" eventKey={1} href="#">
-                       <b><Link to="/resources">Resource</Link></b>
+                       <b><Link to="/profile">Account</Link></b>
                     </NavItem>
-                      <NavItem className="navlist" eventKey={2} href="#">
-                          <b>Account</b>
-                      </NavItem>
-                       <NavItem className="navlist" eventKey={3} href="#"><b>Logout</b></NavItem>
+                      )}
+                      {
+                      isAuthenticated() && (
+
+                        <NavItem className="navlist" eventKey={3} href="#" onClick={this.logout.bind(this)}><b>Logout</b></NavItem>
+                       
+                      )}
+                       
                 </Nav>
             </Navbar.Collapse>
             </Navbar>
