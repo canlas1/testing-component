@@ -52,12 +52,10 @@ class App extends Component {
               {             
               isAuthenticated() && (
 
-                <Dashboard/>
+                <Dashboard auth={this.props.auth}/>
               )}
         
-              <div className="background">
-              Some background
-              </div>
+   
      
       </Row>
      
