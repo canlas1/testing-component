@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import { Panel, ControlLabel, Glyphicon } from 'react-bootstrap';
 import './Profile.css';
 
@@ -18,16 +18,29 @@ class Profile extends Component {
   render() {
     const { profile } = this.state;
     return (
-      <div className="container">
+      <div className="col-lg-12">
         <div className="profile-area">
-          <h1>{profile.name}</h1>
-          <Panel header="Profile">
+          <h1><b>Welcome {profile.name}</b></h1>
+          <hr />
+          <Panel header={profile.given_name + "'s' Profile"}>
+          <div className="row">
+          <div className="col-lg-6">
             <img src={profile.picture} alt="profile" />
+          </div>
+                 <div className="col-lg-6">
+             <ControlLabel><Glyphicon glyph="user" /> Nickname:  <h3>{profile.nickname}</h3>
+              </ControlLabel>
+          </div>
+          </div>
             <div>
-              <ControlLabel><Glyphicon glyph="user" /> Nickname</ControlLabel>
-              <h3>{profile.nickname}</h3>
+        
+            <p>This is your sales portal from Energy Logan. Please use this Application to update your pipeline by adding new projects in the Add New Project Section</p>
+            <p> You can also access to your client's proposals, once the operations team finishes the survey and post-fixtures analysis.</p>
+            <p>Please verify the numbers are correct and have your customer sign the proposal</p>
+            <h4>Happy Sales!</h4>
+             
             </div>
-            <pre>{JSON.stringify(profile, null, 2)}</pre>
+            
           </Panel>
         </div>
       </div>

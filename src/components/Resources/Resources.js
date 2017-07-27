@@ -58,9 +58,15 @@ class Resources extends Component {
       <div>
       <h1><b>Program Incentives Available</b></h1>
       <hr />
+      <p>This section is a library where you can find a list of lighting incentives available in the New York area.</p>
+      <p>Please follow the links to learn more about the description of the programs, the incentive amounts and the requirements and processes.</p>
+      <hr />
       <ul>
         {this.state.dsireData.map(function(object){
-          return  (<li key={object.program_id}><h4><b><a href={object.public_url} target="_blank">{object.program_name}</a></b></h4></li>)
+          return  (<li 
+                      key={object.program_id}>
+        <h4 className="resourceli"><b><a href={object.public_url} 
+          target="_blank">{object.program_name}</a></b></h4></li>)
         })       
         }
 

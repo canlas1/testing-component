@@ -64,8 +64,12 @@ render(){
     <div id="wrapper" className="col-lg-12">
       <div className="row">
         <div className="col-lg-12">
-          <PageHeader>Forms</PageHeader>
-        </div>
+          <PageHeader><b>Add a New Project</b></PageHeader>
+          <p> Fill out the following form to add a new customer or a new project to our system.</p>
+          <p> This information will be received by the operations team in <b>Energy Logan Operations App</b> to be prepared for survey.</p>
+           <hr /> <br />
+        </div>  
+
        
         <div className="col-lg-12">
           <form>
@@ -130,10 +134,11 @@ render(){
               <FormControl componentClass="textarea" id="notes" value={this.state.notes} onChange={this.handleChange.bind(this)} placeholder="Enter text"/>
             </FormGroup>
 
-            <Button  type="submit" onClick={this.handleSubmit.bind(this)}>
-              Submit
+            <Button bsSize="large" type="submit" onClick={this.handleSubmit.bind(this)}>
+              Submit to Operations
             </Button>
           </form>
+          <br /><br />
         </div>
     
     </div>
