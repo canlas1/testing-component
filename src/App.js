@@ -23,7 +23,7 @@ class App extends Component {
     return (
 
        <Row  className="content">
-       <TopNav />
+       <TopNav auth={this.props.auth}/>
 
             {
             !isAuthenticated() && (
@@ -46,18 +46,6 @@ class App extends Component {
               </div>
               </div>
              
-              )}
-        
-
-              {
-              isAuthenticated() && (
-                <Button
-                bsStyle="primary"
-                className="btn-margin"
-                onClick={this.logout.bind(this)}
-                >
-                Log Out
-                </Button>
               )}
 
 
